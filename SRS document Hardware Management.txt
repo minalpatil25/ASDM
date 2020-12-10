@@ -1,0 +1,183 @@
+Introduction
+
+Purpose:
+	
+	The Hardware Management System is a application that provide complete solutions for Organization to keeping track of their 
+	hardware asset as well as It will enable vendors to setup online business, Oranganization to 
+        browse through the shop and purchase them online without having to visiting the hardware outlet physically
+
+Scope:
+	This system allows the Organization to maintain tracking their hardware assets as well as storing all the data about thier vendors 
+	and purchasing the product over the internet.It is very Useful for the big Organization like scheduled bank by which employee
+	at perticular branch can demand for their required hardware to associated Data Centre.  
+	
+
+Definitions:
+	   OSS --> 	Online Shopping System
+	   SRS --> 	Software Requirement Specification
+	   GUI---> 	Graphical User Interface
+	   Portal-->    Personalized Website
+	   Stackholder--> The person who will participate in the System. And Onwer of system
+				Ex.  Customer, Adminstrator , Shopper
+	   UML--->	Software Engineering Notation for visualising System in the form diagrams
+ 	   SSL--->	Secure Socket Layer used for providing restricted access to application.
+	   BOD--->      Board Of Directors (Management).
+           RDBMS -->    Relational Dadabase Management System.
+	   CLUSTERS---> Group of independent servers.	
+
+Overview:
+	This System provides an easy solution to big Organization to maintain tracking their hardware assets employee of organization 
+	demand for their required hardware to associated Data Centre of Oraganization
+        
+
+Additional Information:
+	The system work on internet server, so it will  be operated by all the employees as vendors to deal with
+	Organization for the buying and selling purpose with secure platform.
+        This system protects the integrity of the sellers and buyers.
+        
+	
+General Description:
+	The Hardware Management System helps to manage the hardware in the big Oraganizations like scheduled bank,
+	where it will keep all track about all the hardware assets their history,maintenance,Current value.
+	Also It provide a platform to emploees of Organization to demand their requirement and get it fulfill by selecting profitable vendor.  
+	The Hardware Management System will use the internet as the sole method for organizations' employee and vendor including their
+	data center.
+	
+	
+Functional Requirement:
+	This section provides requirement overview of the system. Various functional modules that can be implemented by 
+	the system will be-
+	
+	Description:
+	Login Admin logins to the system by entering valid user id and password for Adding new branch,Asset Type vendor and the user,
+	Data Entered by the User gets verified by the admin if it is correct admin will pass it as a singing authority.Once Admin found
+	request for New hardware Requirement request for quotations will be generated for vendors once quotations gathered Purchase Order
+	will be generated and sent to the benificial vendor, invoice is get generated from vendor side and sent to admin. 
+	Login user logins to the system by entering valid user id and password for Data Entering of the all hardware exits in
+	organization, maintenance history of ech hardware and keeping track of transfered hardware in which branch it exits right now,
+	also saving the info about scrap asset which can be no more in use.Reports will be genrate for maintenance history,
+	track of transfered hardware and scrap hardware assets.
+	Login Vendor logins to the system by entering valid user id and password for request of quotation to purchase new hardware
+	according to requirement quotation is get generated and sent to the admin once found request for purchase order product will get 
+	dispatch and confirmation will get sent to admin with estimated timing.
+	Login branch Manager logins to the system by entering valid user id and password for requesting new required hardware to admin
+	confirmation after fullfillment of requirement will be sent.
+
+	This system will work on client-Server architecture. It will require an internet server.
+	The system should support some commonly used browser such as Chrome etc.
+	Interface Requirement according to login:
+	Admin:
+		Add Branch
+		Add User
+		Add new Asset Type
+		Add Vendor
+		verification
+			Maintenance 
+			Transferd
+			New Purchased
+			Scrap
+		Req for quotation
+		Purchase Order
+		Product Sent/ recieved confirmation
+		change password
+	User:
+		New purchased Hardwares
+		Transfer
+		Maintenance
+		Scrap
+		report
+		change password
+	Vendor:
+		Quotation req
+		Quotation response
+		Purchase Order
+		Dispatch confirmation with invoice
+	Branch Manager:
+		Request for Hardware
+		Goods Recieved confirmation with thank you.
+		
+Non-Functional Requirements
+
+1.Security:
+	 
+	The system must automcatically log out all user after a period of inactivity.
+	The system should not leave any cookies on the vendor's computer containing users's password.
+	The system's back-end servers shall  only be accessible to authenticated administrators.
+	Sensitive data will be encrypted  before being sent onver insecure connections like internet.
+        The proper firewalls should be developed to avoid intrusions from the internal or external sources.
+
+
+2.Reliability:
+	The system provides storage of all databases on redundant computers with  automatic switchover. 
+	The main pillar of reliability of the system  is the backup of the database 
+	which is conitinously maintained and update to reflect  the most recenet changes.
+
+
+3: Availability:
+	The system should be available at all times.meaning the user can access it using web browser, 
+        only restricted by the down time of the server on which the system runs.
+        In case of a of a hardware failure or database corruption, a replacement page will be shown. 
+	uptime : It mean 24 * 7 availability
+	
+4: Maintainability:
+	A commercial database is used for maintaining the databae and application server takes care of the site. 
+	The maintainability can be done efficiently.
+
+5.Portability:
+	The application is HTML and scripting language based (Javascript). So the end user part is fully portable and any system using 
+	any web browser should be able to use the features of the system,including any hardware platform that is available 
+	or will be available in the futuer. 
+	An end-user  is used this system on an OS;either it is Windows or Linux.
+	The System shall run on PC, Laptops and PDA.etc.
+	The  technology should be transferable to different environments easily.
+
+6.Accessibility:
+        Only registered users should be allowed to process the orders after authentications.
+        Only GUI access of the system should be permited to end users.
+
+7.Policies:
+       The system should adhere to all the legal formalities of the particular countries.
+       The system should maintain security related to sensitive data.
+
+8.Efficiency:
+	The system should provide good throughput and response to multiple users without burdening the system by using appropriate number of servers.
+
+9.Safety:
+      Software should not harm ethical and environmental conditions of the end users machine.
+
+10.Modulariy:
+      The system should have user friendly interface. 
+      It should be easily updated,modified and reused. 
+
+
+Operational Scenario:
+	Branch Manager Interaction:
+
+	The Branch Manager want to buy hardware. He will esnd the request to Data Centre
+	Admin Interaction:
+		Admin add the new user,new vendor,new hardware type.  
+	 The system stores all hardware information for organization,keep track of all record of transfer,maintenance is get verified by admin.
+	 If branch Manager sent request some hardware it will show to admin,admin send request for quotation to vendor,
+	 Got response from vendor i.e quotation,give Purchase order to vendor , recieved goods confirmation to vendor 
+	 
+	User Interaction:
+		user is employye of the data centre who is going to stored all records of each transaction about the hardware
+		transfer,maintenance,scrap generate report for it with the calculation of quarterly depriciation as per RBI norms. 
+	
+	Vendor Interaction:find the req for quotation,generate quotation response,Got purchase order,dispatch confirmation
+	
+	
+	
+Preliminary Schedule: :
+
+	
+	1.Login
+	2.Adding branch
+	3.Adding Hardware Types
+	4.Adding vendors
+	5.verification(Maintenance ,New Purchased Hardware,Transferd,Scrap)
+	6.Req for quotation
+	7.Purchase Order
+	8.Product Sent/ recieved confirmation
+	9.Change password
+	10.Designing Database.
